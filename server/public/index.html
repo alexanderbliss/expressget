@@ -7,6 +7,16 @@
 
 
   <h1>Quotes!</h1>
+
+<form onSubmit="submitForm(event)">
+    Quote: <input type="text" id="quoteInput"/>
+    <br>
+    Author: <input type="text" id="authorInput" />
+    <br>
+    <input type="submit"/>
+</form>
+
+
   <button onclick="getQuotes()">Click for Quotes</button>
   <ul id="output"></ul>
   
