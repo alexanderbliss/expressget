@@ -25,6 +25,19 @@ app.post('/quotes', (req,res) => {
     res.sendStatus(201);
 })
 
+app.delete('/quotes/:index', (req,res) => {
+console.log('Delete request!' , req.body);
+console.log(req.params);
+
+let index = req.params.index
+
+// delete quoteList[index]
+
+quoteList.splice(index , index)
+
+res.sendStatus(201)
+
+})
 
 app.listen(port, function() { 
     console.log('listening on port', port);
